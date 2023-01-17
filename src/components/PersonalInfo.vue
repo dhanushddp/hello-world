@@ -62,7 +62,7 @@
 </template>
 
 
-<script src="/Users/dhanushpraveen/hello-world/src/assets/info.js">
+<script src="/Users/dhanushpraveen/hello-world/src/PersonalInfo.js">
 </script>
 
 <style scoped>
