@@ -1,0 +1,112 @@
+#header {
+    position: sticky;
+    top: 0;
+    border: 2px rgba(0, 148, 217, 255);
+    margin: -10px -10px -10px -10px;
+    overflow: auto;
+    z-index: 10;
+  
+    /* padding-bottom: -300px; */
+  
+    background-color: rgba(0, 148, 217, 255);
+  }
+  
+  #logo {
+    position: relative;
+    top: 20px;
+    left: 50px;
+  }
+  
+  #search {
+    position: relative;
+    left: 60px;
+    bottom: 30px;
+    border-radius: 10px;
+    height: 30px;
+  }
+  
+  #search_button {
+    position: relative;
+    left: 70px;
+    bottom: 23px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 3px 3px 3px 3px;
+    font-size: 22px;
+  }
+  a:hover {
+    background-color: black;
+  }
+  
+  .filter {
+    height: 100%;
+  }
+  .table1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .table2 {
+    height: max-content;
+    width: 300px;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 10px;
+  
+    margin-top: 20px;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    box-shadow: 10px 10px;
+    border-radius: 8px;
+  }
+  
+  .grey {
+    color: grey;
+  }
+  
+  .red {
+    color: red;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-auto-rows: max-content;
+    grid-gap: 1px;
+  }
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    text-align: left;
+  }
+  .add:hover {
+    border: 2px solid blueviolet;
+    color: red;
+  }
+  #p {
+    display: inline;
+    position: absolute;
+    right: 120px;
+    bottom: 1px;
+    font-size: 24px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  #logout {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    bottom: 24px;
+    font-size: 20px;
+    border: 1px solid white;
+    background-color: transparent; 
+    color: white;
+
+  }
