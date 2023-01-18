@@ -94,7 +94,7 @@
     display: inline;
     position: absolute;
     right: 120px;
-    bottom: 1px;
+    bottom: -20px;
     font-size: 24px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -103,10 +103,49 @@
     display: inline;
     position: absolute;
     right: 20px;
-    bottom: 24px;
+    bottom: 4px;
     font-size: 20px;
     border: 1px solid white;
     background-color: transparent; 
     color: white;
 
   }
+
+  .res{
+    width:80%
+  }
+  @media screen and (max-width:1000px) {
+    #logo {
+        position: relative;
+        top: 20px;
+        left: 10px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1000px) {
+    #search {
+        position: relative;
+        left: 35px;
+        bottom: 20px;
+        border-radius: 5px;
+        height: 30px;
+
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    #search_button {
+        position: relative;
+        left: 40px;
+        bottom: 14px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #navigation {
+        text-align: center;
+        padding-bottom: 10px;
+        padding-left: 125px;
+    }
+}

@@ -35,15 +35,15 @@
         <h1>Filter</h1>
         <form>
           <label>Brand:</label><br />
-          <input v-model="searchitem.brand" type="text" /><br />
+          <input class="res" v-model="searchitem.brand" type="text" /><br />
           <label>Model:</label><br />
-          <input v-model="searchitem.model" type="text" /><br />
+          <input class="res" v-model="searchitem.model" type="text" /><br />
           <label>RAM:</label><br />
-          <input v-model="searchitem.ram" type="text" /><br />
+          <input class="res" v-model="searchitem.ram" type="text" /><br />
           <label>Memory:</label><br />
-          <input v-model="searchitem.memory" type="text" /><br />
+          <input  class="res" v-model="searchitem.memory" type="text" /><br />
           <label>Price:</label><br />
-          <input v-model="searchitem.price" type="number" /><br />
+          <input class="res" v-model="searchitem.price" type="number" /><br />
           <button @click="update()" type="button">Submit</button>
         </form>
       </div>
