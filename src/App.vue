@@ -1,21 +1,23 @@
 <template>
   <div id="app">
-    <LoginPage v-if="Object.keys(user).length == 0"></LoginPage>
-    <PersonalInfo :name="user.name" v-else></PersonalInfo>
+    <router-view></router-view>
+
+    <!-- <PersonalInfo :name="user.name" v-else></PersonalInfo> -->
   </div>
 </template>
 <!-- @loggedin="login" -->
 
 <script>
 import { mapGetters } from "vuex";
-import PersonalInfo from "./components/PersonalInfo.vue";
-import LoginPage from "./components/LoginPage.vue";
+// import PersonalInfo from "./components/PersonalInfo.vue";
+
+// import LoginPage from "./components/LoginPage.vue";
 
 export default {
   name: "App",
   components: {
-    PersonalInfo,
-    LoginPage,
+    // PersonalInfo,
+    // LoginPage,
   },
   data() {
     return {

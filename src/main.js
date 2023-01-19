@@ -1,23 +1,20 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Vuex from 'vuex'
+import VueRouter from 'vue-router'
+import router from './index'
 
 Vue.use(Vuex)
-function checkLogin(user) {
-  if (localStorage.getItem('user') === null || localStorage.getItem('user') === "{}") {
-    localStorage.setItem('user', JSON.stringify(user))
-  }
-  return JSON.parse(localStorage.getItem('user'))
+Vue.use(VueRouter)
 
-}
 
 const store = new Vuex.Store({
   state: {
-    user: checkLogin({}),
+    user: {},
   },
   mutations: {
     setLogin(state, user) {
-      state.user = checkLogin(user)
+      state.user = user;
     },
     checkLogout(state) {
       let delobj = {};
@@ -43,7 +40,27 @@ const store = new Vuex.Store({
 
 Vue.config.productionTip = false
 
+
+// let routes = [{
+//   path: '/home',
+//   name: "PersonalInfo",
+//   component: PersonalInfo
+// },
+// {
+//   path: '/login',
+//   name: "LoginPage",
+//   component: LoginPage
+// }]
+
+
+// const router = new VueRouter(
+//   {
+//     mode: "history",
+//     routes
+//   }
+// )
 new Vue({
   store,
+  router,
   render: h => h(App),
 }).$mount('#app')
