@@ -1,6 +1,7 @@
 // import { mapActions } from "vuex";
 import ProductCardComponent from '../src/components/ProductCardComponent.vue';
 import axios from 'axios'
+import { mapGetters } from 'vuex';
 export default {
     components: {
         ProductCardComponent
@@ -49,6 +50,8 @@ export default {
         //this.callApi();
     },
     computed: {
+        ...mapGetters(['user']),
+
         // callApi(){
         //     axios.get(`https://www.blibli.com/backend/search/products?searchTerm=${this.search}&start=0&itemPerPage=24`).then(
         //          (res) => {
@@ -71,6 +74,39 @@ export default {
         }
     },
     methods: {
+        samplePutCall() {
+            axios.put(`https://63c8ecef904f040a9652af79.mockapi.io/users/users/${2}`, { name: 'HariHaran' }).then(
+                (res) => {
+
+                    console.log('updated', res)
+
+                }
+            ).catch((res) => {
+                console.log('rejected', res)
+            })
+        },
+        samplePostCall() {
+            axios.post(`https://63c8ecef904f040a9652af79.mockapi.io/users/users/`, { name: 'Nagadeepan' }).then(
+                (res) => {
+
+                    console.log('updated', res)
+
+                }
+            ).catch((res) => {
+                console.log('rejected', res)
+            })
+        },
+        sampleDelCall() {
+            axios.delete(`https://63c8ecef904f040a9652af79.mockapi.io/users/users/${2}`).then(
+                (res) => {
+
+                    console.log('updated', res)
+
+                }
+            ).catch((res) => {
+                console.log('rejected', res)
+            })
+        },
         callApi() {
             axios.get(`https://www.blibli.com/backend/search/products?searchTerm=${this.search}&start=0&itemPerPage=24`).then(
                 (res) => {
@@ -85,6 +121,11 @@ export default {
                 }
 
             })
+
+
+            // https://63c8ecef904f040a9652af79.mockapi.io/users/users
+
+
         },
         // ...mapActions["logOut"],
         onSearchSuccess(data) {
@@ -115,6 +156,11 @@ export default {
         user_logout() {
             alert("logout")
             this.$store.dispatch('logOut')
+            if(this.user){
+                this.$router.push({name:'LoginPage'})
+            }
+
+
         }
     },
     watch: {

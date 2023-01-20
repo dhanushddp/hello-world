@@ -22,7 +22,9 @@
         search
       </button>
       <p id="p">Hi {{ loggedin }}</p>
-      <button @click="user_logout()" id="logout" type="button">Logout</button>
+      <button id="logout" @click="user_logout()" type="button">Logout</button>
+
+      <!-- <button @click="samplePutCall()" id="logout" type="button">put button</button> -->
       <!-- <nav id="navigation">
         <a href="#">LOGIN</a>&nbsp;&nbsp;&nbsp;
         <a id="signup" href="/Home.html">SIGN UP</a>
@@ -43,6 +45,12 @@
           <label>Price:</label><br />
           <input class="res" v-model="searchitem.price" type="number" /><br />
           <button @click="update()" type="button">Submit</button>
+          <button @click="samplePostCall()" type="button">post button</button>
+          <button @click="sampleDelCall()" type="button">Delete button</button>
+
+
+
+
         </form>
       </div>
       <div style="text-align: center">

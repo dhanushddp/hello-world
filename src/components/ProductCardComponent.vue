@@ -45,4 +45,45 @@
   border-radius:10px;
   background-color: orange;
 }
+@media screen and (max-width:429px) {
+  .table2{
+    margin-left:50%;
+    width: 300px;
+    padding: 10px 10px 20px 0px;
+    margin-bottom: 10px;
+    height:600px;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    box-shadow: 10px 10px;
+    border-radius: 8px;
+}
+}
+@media screen and (max-width:375px) {
+  .table2{
+    margin-left:40%;
+    width: 300px;
+    padding: 10px 10px 20px 0px;
+    margin-bottom: 10px;
+    height:600px;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    box-shadow: 10px 10px;
+    border-radius: 8px;
+}
+}
+@media screen and (max-width:349px) {
+  .table2{
+    margin-left:40%;
+    width: 270px;
+    padding: 10px 10px 20px 0px;
+    margin-bottom: 10px;
+    height:600px;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    box-shadow: 10px 10px;
+    border-radius: 8px;
+}
+}
+
+
 </style>

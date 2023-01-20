@@ -1,22 +1,6 @@
 <template>
   <div class="desc">
-    <div class="head">
-      <img
-        id="logo"
-        src="https://www.static-src.com/siva/asset//10_2022/Blibli.png"
-        width="27%"
-        height="120px"
-      />
-      <input
-        v-model="search"
-        size="75"
-        type="text"
-        name="products"
-        id="search"
-      />
-      <button type="button" id="search_button">search</button>
-      <button id="logout" type="button">Logout</button>
-    </div>
+
     <div class="contain">
       <div class="table2">
         <img :src="getValue().images" width="330px" height="450px" />
