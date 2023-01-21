@@ -12,7 +12,7 @@ export default {
 
     },
     methods: {
-        ...mapActions(['getUser']),
+        ...mapActions('userStore', ['getUser']),
         checkLogin(user) {
             if (localStorage.getItem('user') === null || localStorage.getItem('user') === "{}") {
                 localStorage.setItem('user', JSON.stringify(user))
@@ -30,15 +30,13 @@ export default {
                 this.getUser(userFound)
                 let data = this.checkLogin(userFound)
                 if (data) {
-                    this.$router.push({ name: "PersonalInfo", query: { user_name: data.name } })
+                    this.$router.push({ name: "HomePage", query: { user_name: data.name } })
                 }
 
             } else {
                 alert('incorrect')
             }
 
-            // this.$emit('loggedin',userFound)
-            // this.$emit('user',userFound.name)
         },
         onSuccess() {
 

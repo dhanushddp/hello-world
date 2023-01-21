@@ -12,6 +12,11 @@
   background-color: rgba(0, 148, 217, 255);
 }
 
+.cartButton{
+  position: absolute;
+  right:30px;
+  bottom: 60px;
+}
 #logo {
   position: relative;
   top: 20px;
@@ -238,7 +243,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width:633px){
+@media screen and (max-width:633px) {
   #search {
     position: relative;
     left: 12%;
@@ -251,7 +256,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width:633px){
+@media screen and (max-width:633px) {
   #search_button {
     position: relative;
     left: -70px;
@@ -259,7 +264,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width:533px){
+@media screen and (max-width:533px) {
   #search {
     position: relative;
     left: 4%;
@@ -271,13 +276,15 @@ a:hover {
 
   }
 }
-@media screen and (max-width:533px){
+
+@media screen and (max-width:533px) {
   #search_button {
     position: relative;
     left: -100px;
     bottom: -3px;
   }
 }
+
 @media screen and (max-width:533px) {
   #logo {
     position: relative;
@@ -287,10 +294,11 @@ a:hover {
 
   }
 }
+
 @media screen and (max-width:429px) {
   .grid-item {
     display: none;
- 
+
   }
 }
 
@@ -301,17 +309,19 @@ a:hover {
     bottom: -3px;
   }
 }
-@media screen and (max-width:417px){
+
+@media screen and (max-width:417px) {
   #logo {
     position: relative;
-    width:32%;
+    width: 32%;
     top: 0px;
     left: 53%;
     transform: translateX(-50%);
 
   }
 }
-@media screen and (max-width:417px){
+
+@media screen and (max-width:417px) {
   #search {
     position: relative;
     left: 20%;
@@ -323,14 +333,16 @@ a:hover {
 
   }
 }
-@media screen and (max-width:417px){
+
+@media screen and (max-width:417px) {
   #search_button {
     position: relative;
     left: 43%;
     bottom: 1px;
   }
 }
-@media screen and (max-width:417px){
+
+@media screen and (max-width:417px) {
   #p {
     display: inline;
     position: absolute;
@@ -341,7 +353,8 @@ a:hover {
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 }
-@media screen and (max-width:417px){
+
+@media screen and (max-width:417px) {
   #logout {
     display: inline;
     position: absolute;
@@ -356,25 +369,28 @@ a:hover {
 
   }
 }
-@media screen and (max-width:375px){
- #search{
-  position: relative;
-  left: 52%;
-  width: 250px;
-  margin-bottom: 10px;
-  transform: translateX(-50%);
-  bottom: 20px;
-  border-radius: 5px;
- }
+
+@media screen and (max-width:375px) {
+  #search {
+    position: relative;
+    left: 52%;
+    width: 250px;
+    margin-bottom: 10px;
+    transform: translateX(-50%);
+    bottom: 20px;
+    border-radius: 5px;
+  }
 }
-@media screen and (max-width:375px){
+
+@media screen and (max-width:375px) {
   #search_button {
     position: relative;
     left: -90px;
     bottom: -10px;
   }
 }
-@media screen and (max-width:340px){
+
+@media screen and (max-width:340px) {
   #p {
     display: inline;
     position: absolute;
@@ -385,11 +401,11 @@ a:hover {
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 }
-@media screen and (max-width:322px){
+
+@media screen and (max-width:322px) {
   #search_button {
     position: relative;
     left: -115px;
     bottom: -10px;
   }
 }
-

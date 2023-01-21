@@ -19,7 +19,7 @@
 
 </template>
 
-<script src="../LoginPage.js">
+<script src="../scripts/LoginPage.js">
 </script>
 
 <style scoped>

@@ -1,24 +1,26 @@
 <template>
   <div class="desc">
-
+    <div id="header">
+      <img id="logo" src="../assets/Blibli.webp" width="20%" height="120" />
+    </div>
     <div class="contain">
       <div class="table2">
-        <img :src="getValue().images" width="330px" height="450px" />
+        <img :src="proDesc.images[0]" width="330px" height="450px" />
       </div>
       <div class="table2">
-        <h2>{{ getValue().name }}</h2>
-        <p>location:{{ getValue().location }}</p>
-        <p>Price : Rs.{{ getValue().price.priceDisplay }}</p>
-        <p>Rating: {{ getValue().review?.rating }}</p>
-        <p>Stock available : {{ getValue().itemCount }}</p>
+        <h2>{{ proDesc.name }}</h2>
+        <p>location:{{ proDesc.location }}</p>
+        <p>Price :{{ proDesc.price.priceDisplay }}</p>
+        <p>Rating: {{ proDesc.review?.rating }}</p>
+        <p>Stock available : {{ proDesc.itemCount }}</p>
 
-        <p>{{ getValue().status }}</p>
+        <p>{{ proDesc.status }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<script src="../ProductDescription.js">
+<script src="../scripts/ProductDescription.js">
 </script>
 
 <style scoped>

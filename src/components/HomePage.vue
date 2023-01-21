@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
     <div id="header" style="text-align: left">
@@ -11,24 +9,18 @@
       />
       <input
         v-model="search"
+        
         size="75"
         type="text"
         name="products"
         id="search"
-
       />
-      <button type="button" id="search_button" @click="callApi">
-        <!-- <img src="search.png" width="25px" /> -->
-        search
-      </button>
+      <!-- <button type="button" id="search_button" @click="callApi">search</button> -->
+      <button type="button" id="search_button">search</button>
+      <button type="button" class="cartButton" @click="shoppingCart()"><i class="fa fa-cart-plus fa-lg" style=" color: black;margin: auto;"></i></button>
+
       <p id="p">Hi {{ loggedin }}</p>
       <button id="logout" @click="user_logout()" type="button">Logout</button>
-
-      <!-- <button @click="samplePutCall()" id="logout" type="button">put button</button> -->
-      <!-- <nav id="navigation">
-        <a href="#">LOGIN</a>&nbsp;&nbsp;&nbsp;
-        <a id="signup" href="/Home.html">SIGN UP</a>
-      </nav> -->
     </div>
     <div class="grid-container">
       <div class="grid-item">
@@ -47,28 +39,11 @@
           <button @click="update()" type="button">Submit</button>
           <button @click="samplePostCall()" type="button">post button</button>
           <button @click="sampleDelCall()" type="button">Delete button</button>
-
-
-
-
         </form>
       </div>
       <div style="text-align: center">
         <div class="table1">
-          <!-- <div class="table2" v-for="(pro, index) in fil_list" :key="index">
-            <img :src="pro.image" width="110px" height="150px" />
-            <h2>name Name : {{ pro.name }}</h2>
-            <h3>Model : {{ pro.model }}</h3>
-            <p>Ram : {{ pro.ram }} {{ pro.memory }}</p>
-            <p>Rating : {{ pro.rating }}</p>
-            <p>Price : Rs.{{ pro.price }}</p>
-            <p :class="pro.stock < 10 ? 'red' : 'grey'">
-              Stock : {{ pro.stock }}
-            </p>
-            <button @click="added(pro)" :disabled="pro.stock <= 0" class="add">
-              Add to cart
-            </button>
-          </div> -->
+          <p v-if="errorOccured">Error Occured</p>
           <ProductCardComponent
             v-for="(order, index) in fil_list"
             :key="index"
@@ -82,7 +57,7 @@
 </template>
 
 
-<script src="/Users/dhanushpraveen/hello-world/src/PersonalInfo.js">
+<script src="../scripts/HomePage.js">
 </script>
 
 <style scoped>
