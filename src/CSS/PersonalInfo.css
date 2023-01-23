@@ -218,8 +218,9 @@ a:hover {
 
   #p {
     display: inline;
+    width:fit-content;
     position: absolute;
-    right: 5px;
+    left: 5px;
     top: 1px;
     font-size: 20px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -275,6 +276,20 @@ a:hover {
     border-radius: 5px;
 
   }
+}
+@media screen and (max-width:533px) {
+
+  #p {
+    display: inline;
+    width:fit-content;
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    font-size: 14px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
 }
 
 @media screen and (max-width:533px) {

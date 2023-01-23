@@ -5,7 +5,7 @@
 
       <h2>{{ productobj.name }}</h2>
       <p>Loaction :{{ productobj.location }}</p>
-      <p>Price :{{ productobj.price.priceDisplay }}</p>
+      <p>Price :{{ (productobj?.price?.priceDisplay).split(' ')[0]}}</p>
 
       <p>Rating:{{ productobj.review?.rating }}</p>
       <p :class="productobj.itemCount < 10 ? 'red' : 'grey'">

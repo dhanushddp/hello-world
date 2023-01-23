@@ -8,21 +8,24 @@ export default {
 
         }
     },
+    mounted() {
+
+    },
     computed: {
         ...mapGetters('cartStore', ['getCart', 'getOrder']),
         ...mapGetters('userStore', ['user']),
-        // add(product){
-        //     const arr = this.getCart
-        //     const index = arr.findIndex(object => {
-        //         return object.name === product.name;
-        //       });
+        totalCartPrice() {
+            let total = 0;
+            this.getCart.forEach((item) => {
+                total += parseFloat(item.price.priceDisplay.split('p')[1]) * item.quantity;
+            });
+            return total;
 
-        //    this.cartCountAdd(index)
-        // }
+        }
 
     },
     methods: {
-        ...mapActions('cartStore', ['removeCart', 'clearCart', 'cartCountAdd']),
+        ...mapActions('cartStore', ['removeCart', 'clearCart', 'cartCountAdd', 'cartCountSub']),
         user_logout() {
             alert("logout")
             this.$store.dispatch('userStore/logOut')
@@ -42,9 +45,41 @@ export default {
 
         },
         placeOrder() {
-            this.clearCart()
-            console.log(this.getOrder)
-            this.isPlaced = true
+            if (this.getCart.length) {
+                this.clearCart()
+                console.log(this.getOrder)
+
+                this.isPlaced = true
+            }
+
+        },
+
+
+        add(product) {
+            const arr = this.getCart
+            const index = arr.findIndex(object => {
+                return object.name === product.name;
+            });
+
+            this.cartCountAdd(index)
+        },
+
+        reduce(product) {
+            if (product.quantity == 1) {
+                const arr = this.getCart
+                const index = arr.findIndex(object => {
+                    return object.name === product.name;
+                });
+                this.removeCart(index)
+            }
+            else {
+                const arr = this.getCart
+                const index = arr.findIndex(object => {
+                    return object.name === product.name;
+                });
+
+                this.cartCountSub(index)
+            }
         }
     },
     watch: {

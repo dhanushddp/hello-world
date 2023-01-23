@@ -39,7 +39,7 @@ export default {
     computed: {
         ...mapGetters('userStore', ['user']),
         ...mapGetters('proStore', ['products']),
-        ...mapGetters('cartStore', ['cart']),
+        ...mapGetters('cartStore', ['getCart']),
         loggedin() {
             return this.$route.query.user_name
  }
@@ -102,6 +102,7 @@ export default {
 
         },
         shoppingCart(){
+          
            this.$router.push({name:'cartComponent'}) 
         }
     },
